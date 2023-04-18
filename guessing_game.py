@@ -3,8 +3,6 @@ import speech_recognition as sr
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QColor
 
-
-
 class GuessingGame(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
@@ -13,7 +11,6 @@ class GuessingGame(QtWidgets.QWidget):
         self.number = None
         self.initUI()
         
-
         self.setWindowIcon(QtGui.QIcon('icone.png'))
         
         self.setStyleSheet("""
@@ -73,8 +70,6 @@ class GuessingGame(QtWidgets.QWidget):
         self.chances_label.setGeometry(QtCore.QRect(20, 40, 150, 30))
         self.chances_label.setStyleSheet("font-weight: bold; color: white; font-size: 20px;")
         self.update_chances_label()
-
-        
 
         self.show()
 
