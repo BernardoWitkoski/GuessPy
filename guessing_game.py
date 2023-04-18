@@ -17,7 +17,7 @@ class GuessingGame(QtWidgets.QWidget):
             QLabel {
                 font-size: 20px;
                 font-weight: bold;
-                color: white;
+                color: black;
             }
             QPushButton {
                 background-color: #00bfff;
@@ -39,17 +39,17 @@ class GuessingGame(QtWidgets.QWidget):
 
     def initUI(self):
         self.setWindowTitle('Jogo de Adivinhação')
-        self.setGeometry(100, 100, 400, 200)
+        self.setGeometry(200, 200, 600, 400)
 
         self.label = QtWidgets.QLabel('Pense em um número de 0 a 100', self)
-        self.label.setGeometry(QtCore.QRect(100, 20, 200, 30))
+        self.label.setGeometry(QtCore.QRect(133, 20, 400, 30))
 
         self.button = QtWidgets.QPushButton('Falar', self)
-        self.button.setGeometry(QtCore.QRect(150, 60, 100, 30))
+        self.button.setGeometry(QtCore.QRect(250, 60, 100, 30))
         self.button.clicked.connect(self.speak)
 
         self.textbox = QtWidgets.QLineEdit(self)
-        self.textbox.setGeometry(QtCore.QRect(150, 100, 100, 30))
+        self.textbox.setGeometry(QtCore.QRect(250, 100, 100, 30))
         self.textbox.setReadOnly(True)
 
         self.show()
